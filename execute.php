@@ -20,15 +20,14 @@ $response = '';
 
 $token = "941539793:AAGdZEeLppzYtY_J_4tuAf_MyHgjl590DWc";
 $chatid = $chatId;
-sendMessage($chatid, "Hello World", $token);
 
 
 
 
-//if(strpos($text, "/start") === 0 || $text=="ciao")
-//{
-//	$response = "Ciao $firstname, benvenuto!";
-//}
+
+if(strpos($text, "?") === 0 !== false) {
+    sendMessage($chatid, "HO TROVATO UN PUNTO INTERROGATIVO", $token);
+}
 //elseif($text=="domanda 1")
 //{
 //	$response = "risposta 1";
@@ -44,6 +43,7 @@ sendMessage($chatid, "Hello World", $token);
 //$parameters = array('chat_id' => $chatId, "text" => $response);
 //$parameters["method"] = "sendMessage";
 //echo json_encode($parameters);
+
 
 
 
