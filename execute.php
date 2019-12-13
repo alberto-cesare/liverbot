@@ -21,7 +21,8 @@ $response = '';
 $token = "941539793:AAGdZEeLppzYtY_J_4tuAf_MyHgjl590DWc";
 
 
-if(strpos($text, "a") === 0 !== false) {
+sendMessage($chatid, "[EXECUTED]", $token);
+if(strstr($text, '?')){
     sendMessage($chatid, "HO TROVATO UN PUNTO INTERROGATIVO", $token);
 }
 //elseif($text=="domanda 1")
