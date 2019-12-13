@@ -17,6 +17,14 @@ $text = trim($text);
 $text = strtolower($text);
 header("Content-Type: application/json");
 $response = '';
+
+$token = "941539793:AAGdZEeLppzYtY_J_4tuAf_MyHgjl590DWc";
+$chatid = $chatId;
+sendMessage($chatid, "Hello World", $token);
+
+
+
+
 //if(strpos($text, "/start") === 0 || $text=="ciao")
 //{
 //	$response = "Ciao $firstname, benvenuto!";
@@ -33,12 +41,26 @@ $response = '';
 //{
 //	$response = "Comando non valido!";
 //}
-
-if($text=="domanda 1")
-{
-	$response = "risposta 1";
-}
-
 $parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
+
+
+
+
+
+function sendMessage($chatID, $messaggio, $token) {
+    echo "sending message to " . $chatID . "\n";
+
+    $url = "https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $chatID;
+    $url = $url . "&text=" . urlencode($messaggio);
+    $ch = curl_init();
+    $optArray = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true
+    );
+    curl_setopt_array($ch, $optArray);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    return $result;
+}
