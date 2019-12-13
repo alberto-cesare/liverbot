@@ -41,7 +41,7 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 elseif(strpos($text, "?") === 0)
 {
 	$randInt = random_int(0,11);
-	$response = myarray[$randInt];
+	$response = arrayQuestions[$randInt];
 }
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
