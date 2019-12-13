@@ -22,9 +22,9 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 {
 	$response = "Ci siamo capiti?";
 }
+
 elseif(strpos($text, "?") === 0)
 {
-
 	$arrayQuestions = array(
     0    => "Ci siamo capiti (bene)? ",
     1  => "Spero che sia chiaro ",
@@ -37,8 +37,8 @@ elseif(strpos($text, "?") === 0)
     8 => "È chiaro per tutti? ",
     9 => "Per l'amor del cielo! ",
     10 => "Lasciamo stare eh ",
-    11 => "Mi sono spiegato?",
-    );
+    11 => "Mi sono spiegato?");
+    
 	$randInt = random_int(0,11);
 	$response = $arrayQuestions[$randInt]);
 }
