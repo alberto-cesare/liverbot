@@ -25,22 +25,10 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 
 elseif(strpos($text, "?") === 0)
 {
-	$arrayQuestions = array(
-    0    => "Ci siamo capiti (bene)? ",
-    1  => "Spero che sia chiaro ",
-    2  => "Lettura del complessivo",
-    3 => "Può essere da prendere in considerazione",
-    4 => "Sono deduzioni da cose semplici ",
-    5 => "Dico delle banalità ",
-    6 => "Di questi errori ne continuo a vedere a palate",
-    7 => "No? Ecco.",
-    8 => "È chiaro per tutti? ",
-    9 => "Per l'amor del cielo! ",
-    10 => "Lasciamo stare eh ",
-    11 => "Mi sono spiegato?");
-    
+	$arrayQuestions = array("Ci siamo capiti (bene)? ", "Spero che sia chiaro ", "Lettura del complessivo", "Può essere da prendere in considerazione", "Sono deduzioni da cose semplici ", "Dico delle banalità ", "Di questi errori ne continuo a vedere a palate", "No? Ecco.", "È chiaro per tutti? ", "Per l'amor del cielo! ", "Lasciamo stare eh ", "Mi sono spiegato?");
+
 	$randInt = random_int(0,11);
-	$response = $arrayQuestions[$randInt]);
+	$response = $arrayQuestions[$randInt];
 }
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
