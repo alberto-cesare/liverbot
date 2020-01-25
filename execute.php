@@ -20,7 +20,7 @@ $response = '';
 
 if(strpos($text, "/start") === 0 || $text=="ciao")
 {
-	$response = "Ci siamo capiti?";
+	$response = "Esamix con la i, Labx senza";
 }
 
 elseif((substr(strrev(trim($text)),0,1) == "?"))
