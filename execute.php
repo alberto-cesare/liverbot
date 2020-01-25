@@ -25,20 +25,20 @@ if(strpos($text, "/start") === 0 || $text=="ciao")
 
 elseif((substr(strrev(trim($text)),0,1) == "?"))
 	{
-		$arrayQuestions = array("Ci siamo capiti (bene)? ", "Spero che sia chiaro ", "Lettura del complessivo", "Può essere da prendere in considerazione", "Sono deduzioni da cose semplici ", "Dico delle banalità ", "Di questi errori ne continuo a vedere a palate", "No? Ecco.", "È chiaro per tutti? ", "Per l'amor del cielo! ", "Lasciamo stare eh ", "Mi sono spiegato?");
+		$arrayQuestions = array("Ci siamo capiti (bene)? ", "Spero che sia chiaro ", "Lettura del complessivo", "Può essere da prendere in considerazione", "Sono deduzioni da cose semplici ", "Dico delle banalità ", "Di questi errori ne continuo a vedere a palate", "No? Ecco.", "È chiaro per tutti? ", "Per l'amor del cielo! ", "Lasciamo stare eh ", "Mi sono spiegato?","Esamix con la i, Labx senza");
 
-		$randInt = random_int(0,11);
+		$randInt = random_int(0,12);
 		$response = $arrayQuestions[$randInt];
 	}
-	elseif(strpos($mystring, "ah") !== false){
+	elseif(strpos($mystring, "ahahahah") !== false){
 
         $response = "Non ridete che di questi errori ne ho visti a palate";
 
     }
     elseif(strpos($mystring, "?") !== false){
 
-        $arrayQuestions = array("Ci siamo capiti (bene)? ", "Spero che sia chiaro ", "Lettura del complessivo", "Può essere da prendere in considerazione", "Sono deduzioni da cose semplici ", "Dico delle banalità ", "Di questi errori ne continuo a vedere a palate", "No? Ecco.", "È chiaro per tutti? ", "Per l'amor del cielo! ", "Lasciamo stare eh ", "Mi sono spiegato?");
-        $randInt = random_int(0,11);
+        $arrayQuestions = array("Ci siamo capiti (bene)? ", "Spero che sia chiaro ", "Lettura del complessivo", "Può essere da prendere in considerazione", "Sono deduzioni da cose semplici ", "Dico delle banalità ", "Di questi errori ne continuo a vedere a palate", "No? Ecco.", "È chiaro per tutti? ", "Per l'amor del cielo! ", "Lasciamo stare eh ", "Mi sono spiegato?","Esamix con la i, Labx senza");
+        $randInt = random_int(0,12);
 		$response = $arrayQuestions[$randInt];
 
     }
